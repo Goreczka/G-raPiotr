@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="POST">
+        <input type="number" name="liczba" >
+        <input type="submit" value="sprawdz">
+    </form>
+ <div class="wynik"></div>
+
+<script>
+
+const formluarz = document.querySelector("form"); 
+const div = document.querySelector(".wynik");
+
+formluarz.addEventListener("submit", (e)=> {
+    e.preventDefault();
+const liczba = document.querySelector('input[name="liczba"]').value *1;
+if (liczba%2==0){
+        div.textContent = `Liczba ${liczba} jest parzysta`;
+    } else{
+        div.textContent = `liczba ${liczba} jest nie parzysta`;
+    }
+});
+
+
+</script>
+    
+
+
+    
+</body>
+</html>
