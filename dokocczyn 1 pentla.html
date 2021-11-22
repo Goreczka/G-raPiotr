@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="POST">
+        <legend>Podaj wysokosc</legend>
+        <input type="number" name="a">
+        
+        <legend> Podaj szerokosc</legend>
+        <input type="number" name="b">
+
+      >
+
+        <input type="submit" value="Sprawdź">
+    </form>
+
+    <div class="wynik"></div>
+
+    <script>
+        const formularz = document.querySelector("form");
+        const div = document.querySelector(".wynik");
+
+        formularz.addEventListener("submit", (e)=> {
+            e.preventDefault();
+            const wysokosc = document.querySelector('input[name="wysokosc"]').value*1;
+            const szerokosc = document.querySelector('input[name="szerokosc"]').value*1;
+           
+            for( i=0; i <=wysokosc; i++){
+                for (j=0; j<=szerokosc; j++)
+                div.textContent = "*";
+
+
+            }
+
+
+           
+        });
+    </script>
+
+
+
+</body>
+</html>          
