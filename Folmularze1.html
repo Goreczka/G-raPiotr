@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="POST">
+        <input type="checkbox" name="wiek" id="wiek1" value="wiek1">
+        <label for="wiek1">10-15</label>
+        <input type="checkbox" name="wiek" id="wiek2" value="wiek1">
+        <label for="wiek2">16-18</label>
+        <input type="checkbox" name="wiek" id="wiek3" value="wiek1">
+        <label for="wiek2">19-25</label>
+        <input type="checkbox" name="wiek" id="wiek4" value="wiek1">
+        <label for="wiek3">25-32</label>
+
+        <input type="submit" value="Wyslij">
+
+
+            <div class="wynik">Zaznaczyles</div>
+        <script>
+            const form =document.querySelector('form');
+            const checkbox = document.querySelectorAll('input[tyle="checkbox"]');
+            const checkbox = document.querySelectorAll('wynik');
+            form.addEventListener('submit', (e) =>{
+                e.preventDefault();
+
+                for(i = 0; i <= checkbox.length; i++){
+                    if(checkbox[i].checked){
+                        console.log(checkbox.value);
+                    }
+  
+                }
+
+            });
+        </script>
+
+
+
+
+
+    </form>
+</body>
+</html>
