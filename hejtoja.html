@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+    <input type="number" name="liczba1" placeholder="Podaj liczbe nr1">    
+    <input type="number" name="liczba2" placeholder="Podaj liczbe nr2">    
+    <input type="submit" value="Oblicz">    
+</form>
+<div class="wynik"></div>
+
+<script>
+
+    const folmularz = document.querySelector('form');
+    const divwynik = document.querySelector('.wynik');
+    const sumuj = function(x,y){
+        return `suma liczb${x} i ${y} wynosi ${x+y}`;
+    }
+    folmularz.addEventListener('submit',(e)=>{
+        e.preventDefault();
+        const liczba1 = document.querySelector('input[name=liczba1]').value * 1;
+        const liczba2 = document.querySelector('input[name=liczba2]').value * 1;
+
+        divwynik.textContent = sumuj(liczba1, liczba2);
+
+
+
+
+
+    })
+
+</script>
+
+
+
+</body>
+
+</html>
