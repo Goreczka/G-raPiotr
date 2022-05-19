@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="POST">
+        <legend>Podaj a</legend>
+        <input type="number" name="a">
+        
+        <legend> Podaj b</legend>
+        <input type="number" name="b">
+
+        <legend> Podaj liczbe całkowita</legend>
+        <input type="number" name="c">
+
+        <input type="submit" value="Sprawdź">
+    </form>
+
+    <div class="wynik"></div>
+
+    <script>
+        const formularz = document.querySelector("form");
+        const div = document.querySelector(".wynik");
+
+        formularz.addEventListener("submit", (e)=> {
+            e.preventDefault();
+            const a = document.querySelector('input[name="a"]').value*1;
+            const b = document.querySelector('input[name="b"]').value*1;
+            const c = document.querySelector('input[name="c"]').value*1;
+
+            if(a>b){
+                if(b<c && c<a){
+                    div.textContent = `Liczba mieści sie w przedziale`;
+              }else{
+                    div.textContent = `Liczba nie mieści sie w przedziale`;     
+                }
+            }else{
+                if(b>c && c>a){
+                    div.textContent = `Liczba mieści sie w przedziale`;
+                }else{
+                    div.textContent = `Liczba nie mieści sie w przedziale`;     
+                }
+            }
+        });
+    </script>
+
+
+
+</body>
+</html>          
