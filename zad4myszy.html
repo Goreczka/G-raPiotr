@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Wspolrzedna X kursora myszy: </h1>
+    <h1>Wspolrzedna Y kursora myszy: </h1>
+    <h1>Wcisniety klawisz: </h1>
+
+    <script>
+       
+        const naglowek = document.querySelectorAll('h1');
+
+        document.addEventListener('mousemove', function(event){
+
+        naglowek[0].textContent = 'Wspolrzedna X kursora myszy: '+event.clientX
+        naglowek[1].textContent =`Wspolrzedna Y kursora myszy: ${event.clientY}`
+        
+    });
+    document.addEventListener('keydown', function (e){
+        naglowek[2].textContent = 'Wcisniety klawisz: ' + e.key;
+    });
+
+
+    
+    </script>
+    
+</body>
+</html>
