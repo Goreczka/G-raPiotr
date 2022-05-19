@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="" method="POST">
+      <input type="number" name ="L1" placeholder="wpisz piwerwsza liczbe">
+
+      <input type="number" name ="L2" placeholder="wpisz druga liczbe">
+
+        <input type="submit" value="Oblicz">        
+    </form>
+
+    <div class="wynik">    </div>
+    <script>
+        const formluarz = document.querySelector('form');
+
+        const diw = document.querySelector('.wynik');
+
+        formluarz.addEventListener('submit',(e)=>{ 
+            e.preventDefault();
+
+            const l1 = document.querySelector('input[name="L1"]').value *1;
+
+            const l2 = document.querySelector('input[name="L2"]').value *1;
+
+                const suma = l1 + l2;
+                
+
+            diw.textContent=' Suma wynosi '+ suma;
+
+            
+        });
+    </script>
+
+    
+
+
+
+</body>
+</html>
